@@ -1,0 +1,220 @@
+.theme-items-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30%;
+    .theme-item{
+        display: flex;
+        align-items: center;
+        padding: 5%;
+        img{
+            max-width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    .header-top {
+        padding: 1% 5%;
+        form{
+            .input-text-wrapper{
+                margin: 0 auto;
+                width: 40%;
+                position: relative;
+                &::before{
+                    content: '';
+                    top: 8%;
+                    right: 1%;
+                    position: absolute;
+                    width: 10%;
+                    height: 90%;
+                    background-image: url('../images/search-icon.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    animation: searchIcon 3s linear infinite;
+                }
+                input[type="text"] {
+                    display: block;
+                    width: 100%;
+                    padding: 2.5% 4%;
+                    border: 1px solid gray;
+                    border-radius: 20px;
+                    outline: none;
+                    font-size: 1rem;
+                    font-family: "Inconsolata", monospace;
+                }
+                input[type="text"]::placeholder {
+                    font-weight: bold;
+                }
+                @keyframes searchIcon {
+                    0%{
+                        top: 8%;
+                        right: 1%;
+                    }
+                    20% {
+                        top: 15%;
+                        right: 3%;
+                    }
+                    40%{
+                        top: 10%;
+                        right: 0%;
+                    }
+                    60%{
+                        top: 0%;
+                        right: 0%;
+                    }
+                    80%{
+                        top: 0%;
+                        right: 3%;
+                    }
+                    100%{
+                        top: 8%;
+                        right: 1%;
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: 0% 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-contents-mobile {
+            display: none;
+        }
+        .logo-image{
+            img{
+                max-width: 60px;
+                height: auto;
+            }
+        }
+        .header-contents{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-family: "Nanum Gothic", sans-serif;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            gap: 25%;
+            .nav-bar{
+                .nav-list{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 40%;
+                    transition: color 5s ease;
+                    .nav-list-item{
+                        a{
+                            color: gray;
+                        }
+                        /*.nav-about-list , .nav-contact-list{
+                            display: none;
+                        }*/
+                        &:hover{
+                            background-clip: text;
+                            animation: textEffect 5s ease infinite;
+                            a{
+                                color: transparent;
+                                font-weight: bold;
+                            }
+                        }
+                        @keyframes textEffect {
+                            0% {
+                                background-image: linear-gradient(to top, #4052ee, #ba0ddd);
+                            }
+                            50% {
+                                background-image: linear-gradient(to top, #910ddd, #4c40ee);
+                            }
+                            100% {
+                                background-image: linear-gradient(to top, #4052ee, #ba0ddd);
+                            }
+                        }
+                    }
+                    .about {
+                        position: relative;
+                        .nav-about-list{
+                            /*display: none;
+                            display: block;*/
+                            position: absolute;
+                            top: 5vh;
+                            left: 0;
+                            .about-list-links{
+                                
+                            }
+                            
+                        }
+                        /*&:hover .nav-about-list{
+                            display: unset;
+                        }*/
+                    }
+                    .contact {
+                        position: relative;
+                        .nav-contact-list{
+                            /*display: none;*/
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 5%;
+                            position: absolute;
+                            top: 5vh;
+                            left: 0;
+                            animation: textEffect 5s ease infinite;
+                        }
+                        /*&:hover .nav-contact-list{
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 5%;
+                        }*/
+                    }
+                }
+            }
+            .page-theme{
+                .theme-item{
+                    &:hover{
+                        animation: scaleRotate 5s ease 1;
+                    }
+                    @keyframes scaleRotate {
+                        from {
+                            transform: scale(1) rotate(0deg);
+                        }
+                        to{
+                            transform: scale(1.2) rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 727px){
+            .header-contents{
+                display: none;
+            }
+            .header-contents-mobile {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 45%;
+                .page-theme-mobile{
+                    .theme-items-container{
+                        .theme-item {
+                            img {
+                                max-width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+                .hamburger-menu{
+                    i{
+                        font-size: 1.2rem;
+                        color: gray;
+                    }
+                    .hamburger-menu-list{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
