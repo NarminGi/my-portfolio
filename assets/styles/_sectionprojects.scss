@@ -26,13 +26,14 @@
 }
 .swiper-pagination-bullet-active {
     background-color: rgb(251, 111, 178);
-    //background-color: rgb(223, 64, 238);
 }
 
 
 .projects-section{
-    padding: 100px var(--padding-size);
-    background-image: url('../images/5.png');
+    padding-left: var(--padding-size);
+    padding-right: var(--padding-size);
+    padding-bottom: 80px;
+    background-image: url('../images/projects-bg.png');
     h3{
         text-transform: uppercase;
         padding-bottom: 100px;

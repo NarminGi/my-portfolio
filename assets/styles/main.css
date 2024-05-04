@@ -224,9 +224,9 @@
 .hero-section {
   padding-left: var(--padding-size);
   padding-right: var(--padding-size);
-  height: 100vh;
-  padding-top: 150px;
-  background-image: url("../images/4.png");
+  height: 115vh;
+  padding-top: 120px;
+  background-image: url("../images/hero-bg.png");
   background-size: cover;
   display: flex;
   justify-content: space-between;
@@ -280,8 +280,10 @@
 }
 
 .projects-section {
-  padding: 100px var(--padding-size);
-  background-image: url("../images/5.png");
+  padding-left: var(--padding-size);
+  padding-right: var(--padding-size);
+  padding-bottom: 80px;
+  background-image: url("../images/projects-bg.png");
 }
 .projects-section h3 {
   text-transform: uppercase;
@@ -301,8 +303,8 @@
 }
 
 .footer {
-  background-image: url(../images/5.png);
-  background-position: bottom;
+  background-image: url(../images/footer-bg.jpg);
+  background-position: center;
   padding: 0 var(--padding-size);
 }
 .footer .footer-top {
@@ -395,10 +397,6 @@
   list-style: none;
 }
 
-body {
-  background-color: rgb(255, 227, 246);
-  background-image: url("../images/body-bg.png");
-}
 body .body-content {
   position: relative;
   overflow: hidden;
