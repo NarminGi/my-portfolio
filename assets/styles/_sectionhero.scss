@@ -1,1 +1,26 @@
- 
+.hero-section{
+    padding-left: var(--padding-size);
+    padding-right: var(--padding-size);
+    height: 100vh;
+    padding-top: 150px;
+    background-image: url('../images/4.png');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .hero-text{
+        flex-basis: 50%;
+        p{
+            font-size: 1rem;
+            font-family: "Inconsolata", monospace;
+        }
+    }
+    .hero-image{
+        flex-basis: 33%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

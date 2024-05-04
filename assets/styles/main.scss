@@ -10,11 +10,32 @@
     text-decoration: none;
     list-style: none;
 }
-.container{
-    padding: 0 10%;
+body{
+    background-color: rgb(255, 227, 246);
+    background-image: url('../images/body-bg.png');
+    .body-content{
+        position: relative;
+        overflow: hidden;
+    }
+    #canvas{
+        position: absolute;
+        width: 100vw;
+        cursor: none;
+    }
 }
-/*
+
 :root{
-    --imagesize : 40px;
+    --header-text: "Nanum Gothic", sans-serif;
+    --paragraph-text: "Inconsolata", monospace;
 }
-*/
+:root{
+    --search-bg-clr: rgb(247, 229, 244);
+    --main-tone: rgba(252, 168, 170, 1);
+    --footer-txt: rgb(208, 105, 255);
+    --header-txt-clr: rgb(128,128,128);
+}
+:root{
+    --header-gap: 85px;
+    --padding-size: 5%;
+}
+

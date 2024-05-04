@@ -1,1 +1,52 @@
- 
+.swiper-wrapper{
+    padding-bottom: 60px;
+    .swiper-slide{
+        width: 200px;
+        position: relative;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(230, 98, 197, 0.377);
+            transition: background-color 2s;
+        }
+        &:hover::before{
+            background-color: rgba(230, 98, 197, 0);
+        }
+    } 
+}
+.swiper-pagination-bullet-active {
+    background-color: rgb(251, 111, 178);
+    //background-color: rgb(223, 64, 238);
+}
+
+
+.projects-section{
+    padding: 100px var(--padding-size);
+    background-image: url('../images/5.png');
+    h3{
+        text-transform: uppercase;
+        padding-bottom: 100px;
+        font-family: var(--header-text);
+        font-size: 1.6rem;
+        font-weight: 200;
+        color: var(--header-txt-clr);
+        text-align: center; 
+        background-clip: text;
+        &:hover{
+            animation: textEffect 5s ease infinite;
+            color: transparent;
+            font-weight: bold;
+        }
+    }
+}
+

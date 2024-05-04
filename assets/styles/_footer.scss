@@ -1,1 +1,92 @@
- 
+.footer{
+    background-image: url(../images/5.png);
+    background-position: bottom;
+    padding: 0 var(--padding-size);
+    .footer-top{
+        padding-top: 40px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        .footer-item{
+            h6{
+                text-align: center;
+                color: var(--header-txt-clr);
+                padding-bottom: 20px;
+                font-size: 1.2rem;
+                font-family: var(--header-text);
+                text-transform: uppercase;
+                background-clip: text;
+                &:hover{
+                    animation: textEffect 5s ease infinite;
+                    color: transparent;
+                    font-weight: bold;
+                }
+            }
+            .skills-list{
+                padding-right: 150px;
+                color: var(--header-txt-clr);
+                line-height: 1.5rem;
+                text-transform: uppercase;
+                font-family: var(--header-text);
+                li{
+                    i{
+                        padding-right: 20px;
+                        color: var(--footer-txt);
+                    }
+                }
+            }
+            .footer-contact-list{
+                font-size: 24px;
+                display: flex;
+                gap: 15px;
+                li{
+                    i{
+                        color: var(--header-txt-clr);
+                        background-clip: text;
+                        &:hover{
+                            animation: textEffect 5s ease infinite;
+                            color: transparent;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .footer-input{
+                form{
+                    display: flex;
+                    .email-input{
+                        outline: none;
+                        font-family: var(--paragraph-text);
+                        color: var(--header-txt-clr);
+                        padding: 10px 15px;
+                        border: 1px solid transparent;
+                        border-radius: 20px 0 0 20px;
+                        width: 200px;
+                    }
+                    .subscribe-button{
+                        padding: 10px 15px;
+                        border: 1px solid transparent;
+                        border-radius: 0 20px 20px 0;
+                        color: var(--header-txt-clr);
+                        background-color: var(--search-bg-clr);
+                        transition: background-color 2s;
+                        &:hover{
+                            background-color: var(--main-tone);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        padding-bottom: 20px;
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-family: var(--paragraph-text);
+            #heart{
+                color: rgb(255, 105, 180);
+            }
+        }
+    }
+} 
