@@ -1,19 +1,3 @@
-//Slider
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-    clickable: true,
-  },
-  autoplay: {
-    delay: 5000,
-  },
-  speed: 1000,
-});
-
 //Particules emitter simulation
 class Star {
   constructor(x, y, dx, dy, size, color) {

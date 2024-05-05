@@ -3,7 +3,7 @@
     background-position: center;
     padding: 0 var(--padding-size);
     .footer-top{
-        padding-top: 40px;
+        padding-top: 60px;
         padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
@@ -16,11 +16,11 @@
                 font-family: var(--header-text);
                 text-transform: uppercase;
                 background-clip: text;
-                &:hover{
+                
                     animation: textEffect 5s ease infinite;
                     color: transparent;
                     font-weight: bold;
-                }
+                
             }
             .skills-list{
                 padding-right: 150px;
@@ -79,7 +79,7 @@
         }
     }
     .footer-bottom{
-        padding-bottom: 20px;
+        padding-bottom: 40px;
         p{
             text-align: center;
             font-size: 16px;
