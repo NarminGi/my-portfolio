@@ -14,151 +14,118 @@
     <body>
         <div class="body-content">
             <canvas id="canvas"></canvas>
-        <header class="header">
-            <div class="header-top">
-                <form class="form">
-                    <div class="input-text-wrapper">
-                        <input type="text" placeholder="Search here...">
+            <header class="header">
+                <div class="header-top">
+                    <form class="form">
+                        <div class="input-text-wrapper">
+                            <input class="search-input" type="text" placeholder="Search here...">
+                        </div>
+                    </form>
+                </div>
+                <div class="header-bottom">
+                    <div class="logo-image">
+                        <img class="logo" src="assets/images/bearheart.gif" alt="Logo image: A bear with the hearts" title="Logo">
                     </div>
-                </form>
-                <!--span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span-->
-            </div>
-            <div class="header-bottom">
-                <a class="logo-image" href="index.html">
-                    <img src="assets/images/bearheart.gif" alt="Logo image: A bear with the hearts" title="Logo">
-                </a>
-                <div class="header-contents-mobile">
-                    <div class="page-theme-mobile">
-                        <div class="theme-items-container">
-                            <div class="theme-item">
-                                <img src="assets/images/sun-3.png" alt="The sun">
-                            </div>
-                            <div class="theme-item">
-                                <img src="assets/images/moon.png" alt="The moon">
+                    <div class="header-contents-mobile">
+                        <div class="page-theme-mobile">
+                            <div class="theme-items-container">
+                                <div class="theme-item">
+                                    <img src="assets/images/sun-3.png" alt="The sun">
+                                </div>
+                                <div class="theme-item">
+                                    <img src="assets/images/moon.png" alt="The moon">
+                                </div>
                             </div>
                         </div>
+                        <div class="hamburger-menu">
+                            <div class="top-bread"></div>
+                            <div class="meat"></div>
+                            <div class="bottom-bread"></div>
+                            <ul class="hamburger-menu-list">
+                                <label>Menu</label>
+                                <li class="hamburger-menu-list-item">Home</li>
+                                <li class="hamburger-menu-list-item">About</li>
+                                <li class="hamburger-menu-list-item">Contact</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="hamburger-menu">
-                        <div id="top-bread"></div>
-                        <div id="meat"></div>
-                        <div id="bottom-bread"></div>
-                        <ul class="hamburger-menu-list">
-                            <label>Menu</label>
-                            <li class="hamburger-menu-list-item">Home</li>
-                            <li class="hamburger-menu-list-item">About</li>
-                            <li class="hamburger-menu-list-item">Contact</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header-contents">
-                    <nav class="nav-bar">
-                        <ul class="nav-list">
-                            <li class="nav-list-item">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="nav-list-item about">
-                                <a href="#">About</a>
-                                <ul class="nav-about-list">
-                                    <li class="about-list-links">
-                                        <a href="#">Biography</a>
-                                    </li>
-                                    <li class="about-list-links">
-                                        <a href="#">Education</a>
-                                    </li>
-                                    <li class="about-list-links">
-                                        <a class="about-list-links" href="#">Experience</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-list-item contact">
-                                <a href="#">Contact</a>
-                                <ul class="nav-contact-list">
-                                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="page-theme">
-                        <div class="theme-items-container">
-                            <div class="theme-item active-theme">
-                                <img src="assets/images/sun-3.png" alt="The sun">
-                            </div>
-                            <div class="theme-item">
-                                <img src="assets/images/moon.png" alt="The moon">
+                    <div class="header-contents">
+                        <nav class="nav-bar">
+                            <ul class="nav-list">
+                                <li class="nav-list-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="nav-list-item about">
+                                    <a href="#">About</a>
+                                    <ul class="nav-about-list"></ul>
+                                </li>
+                                <li class="nav-list-item contact">
+                                    <a href="#">Contact</a>
+                                    <ul class="nav-contact-list"></ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="page-theme">
+                            <div class="theme-items-container">
+                                <div class="theme-item active-theme">
+                                    <img src="assets/images/sun-3.png" alt="The sun">
+                                </div>
+                                <div class="theme-item">
+                                    <img src="assets/images/moon.png" alt="The moon">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <main class="main">
-            <section class="hero-section">
-                <div class="hero-text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam similique quisquam placeat voluptatibus adipisci pariatur unde eum, ex voluptas tempora perferendis ab necessitatibus, aliquam iste iure repellat. Sit, ad ab!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nam eum a dolores dicta laborum aspernatur odio cumque, voluptate cupiditate deserunt autem, explicabo ea quisquam iure distinctio reiciendis nisi corrupti!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim quam quia explicabo veritatis, magni labore ex. Sed, cupiditate eos eius saepe obcaecati nihil quaerat quos quia voluptate! Assumenda, eum.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis laborum officiis minus, possimus ea eligendi, sit pariatur maiores nemo aperiam amet. Fugit quia eius ex minima quibusdam quaerat qui ea?
-                    </p>
-                </div>
-                <div class="hero-image">
-                    <img src="./assets/images/hero-image.png" alt="A brunette cartoon girl">
-                </div>
-            </section>
-            <section class="projects-section">
-                <h3>Projects</h3>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-item">
-                    <h6>Skills</h6>
-                    <ul class="skills-list">
-                        <li><i class="fa-regular fa-star"></i>Html</li>
-                        <li><i class="fa-regular fa-star"></i>Css</li>
-                        <li><i class="fa-regular fa-star"></i>Bootstrap</li>
-                        <li><i class="fa-regular fa-star"></i>JavaScript</li>
-                        <li><i class="fa-regular fa-star"></i>React</li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <h6>Contacts</h6>
-                    <ul class="footer-contact-list">
-                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <h6>Subscribe</h6>
-                    <div class="footer-input">
-                        <form>
-                            <input class="email-input" type="email" placeholder="Enter your email adress..." required>
-                            <button class="subscribe-button">Subscribe</button>
-                        </form>
+            </header>
+            <main class="main">
+                <section class="hero-section">
+                    <div class="hero-text">
+                        <p class="hero-paragraph">Hello, there!<br/>Welcome To My Page...</p>
+                    </div>
+                    <div class="hero-image">
+                        <img src="./assets/images/hero-image.png" alt="A brunette cartoon girl">
+                    </div>
+                </section>
+                <section class="projects-section">
+                    <h3>Projects</h3>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="footer-item">
+                        <h6>Skills</h6>
+                        <ul class="skills-list"></ul>
+                    </div>
+                    <div class="footer-item">
+                        <h6>Contacts</h6>
+                        <ul class="footer-contact-list"></ul>
+                    </div>
+                    <div class="footer-item">
+                        <h6>Subscribe</h6>
+                        <div class="footer-input">
+                            <form>
+                                <input class="email-input" type="email" placeholder="Enter your email adress..." required>
+                                <button class="subscribe-button">Subscribe</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>made by <i>Narmin</i><sup>&copy;</sup> with <i class="fa-solid fa-heart" id="heart"></i></p>
-            </div>
-        </footer>
+                <div class="footer-bottom">
+                    <p>made by <i>Narmin</i><sup>&copy;</sup> with <i class="fa-solid fa-heart" id="heart"></i></p>
+                </div>
+            </footer>
         </div>
         <script src="https://kit.fontawesome.com/c1944f1fb1.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./assets/js/main.js"></script>
         <script src="./assets/js/particuleEmitter.js"></script>
         <script src="./assets/js/header.js"></script>
-        <script src="./assets/js/sectionHero.js"></script>
+        <script src='./assets/js/sectionHero.js'></script>
         <script src="./assets/js/sectionProjects.js"></script>
         <script src="./assets/js/footer.js"></script>
     </body>

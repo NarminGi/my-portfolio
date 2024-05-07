@@ -25,7 +25,7 @@ const sliderData = [
 
 function createSlider(){
     const projectSlider = document.querySelector('.swiper-wrapper');
-    sliderData.forEach(item =>{
+    sliderData.forEach(item => {
         let div = document.createElement('div');
         div.classList.add("swiper-slide");
         let image = document.createElement('img');
@@ -33,11 +33,9 @@ function createSlider(){
         image.alt = item.alternative;
         div.appendChild(image);
         projectSlider.appendChild(div);
-        image.addEventListener("click", () => {
-            window.location.href = item.directingUrl;
-        })
+        image.addEventListener("click", () => window.location.href = item.directingUrl);
     }
-    )
+    );
 }
 
 createSlider();

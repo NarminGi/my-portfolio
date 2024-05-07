@@ -80,6 +80,7 @@
         }
     }
     .header-bottom {
+        width: 100%;
         padding: 0% 5%;
         display: flex;
         justify-content: space-between;
@@ -88,6 +89,7 @@
             display: none;
         }
         .logo-image{
+            cursor: pointer;
             img{
                 max-width: 60px;
                 height: auto;
@@ -137,15 +139,16 @@
                         position: relative;
                         .nav-about-list{
                             position: absolute;
+                            cursor: pointer;
                             top: 100%;
                             left: 0;
-                            .about-list-links:hover a{
+                            color: var(--header-txt-clr);
+                            .about-list-links:hover{
                                 background-clip: text;
                                 animation: textEffect 5s ease infinite;
                                 color: transparent;
                                 font-weight: bold;
                             }
-                            
                         }
                         &:hover .nav-about-list{
                             display: block;
@@ -157,7 +160,11 @@
                             position: absolute;
                             top: 100%;
                             left: 0;
-                            & a:hover{
+                            cursor: pointer;
+                            i{
+                                color: var(--header-txt-clr);
+                            }
+                            & i:hover{
                                 background-clip: text;
                                 animation: textEffect 5s ease infinite;
                                 color: transparent;
@@ -176,20 +183,17 @@
                 background-color: var(--search-bg-clr);
                 border: 1px solid var(--header-txt-clr);
                 border-radius: 20px;
+                cursor: pointer;
                 .theme-item{
                     border-radius: 50%;
                     &:hover{
-                        animation: scaleRotate 5s ease 1;
-                    }
-                    @keyframes scaleRotate {
-                        from {
-                            transform: scale(1) rotate(0deg);
-                        }
-                        to{
-                            transform: scale(1.2) rotate(360deg);
-                        }
+                        transition: transform 5s;
+                        transform: rotate(360deg);
                     }
                 }
+            }
+            .active-theme{
+                background-color: rgb(252, 217, 224);
             }
         }
         @media (max-width: 727px){
@@ -217,13 +221,27 @@
                         height: 2px;
                         border-radius: 2px;
                         background-color: var(--header-txt-clr);
-                        //font-size: 1.2rem;
                     }
-                    #meat{
+                    .meat{
                         margin: 3px 0px;
                     }
                     .hamburger-menu-list{
                         display: none;
+                    }
+                    .rotateRight{
+                        transform: rotate(45deg);
+                        transition: transform 2s;
+                    }
+                    .disappear{
+                        transition: opacity;
+                        opacity: 0;
+                    }
+                    .rotateLeft{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: transform 2s;
+                        transform: rotate(-45deg);
                     }
                 }
             }
