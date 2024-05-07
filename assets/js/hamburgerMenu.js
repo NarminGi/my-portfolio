@@ -1,28 +1,16 @@
-const searchInput = document.querySelector('.search-input');
-function addPlaceholder(){
-    searchInput.addEventListener('blur',()=>{
-        searchInput.setAttribute('placeholder', 'Search here...')
-    })
-
-}
-addPlaceholder();
-
-function clearPlaceholder(){
-    searchInput.addEventListener('click', () => {
-        searchInput.setAttribute('placeholder', '');
-        const searchWrapper = window.getComputedStyle(document.querySelector('.input-text-wrapper'), '::before');
-        searchWrapper.style.setProperty('background-image', 'none');
-    });
-}
-clearPlaceholder();
-
-
-const logo = document.querySelector('.logo');
-logo.addEventListener('click',()=>{
-    window.location.href = 'index.html';
+let hamburger = document.querySelector('.hamburger-menu');
+hamburger.addEventListener('click',function(){
+    let topBread = document.querySelector('.top-bread');
+    let meat = document.querySelector('.meat');
+    let bottomBread = document.querySelector('.bottom-bread');
+    topBread.classList.toggle('rotateRight');
+    meat.classList.toggle('disappear');
+    bottomBread.classList.toggle('rotateLeft');
+    let menu = document.querySelector('.hamburger-menu-list-page');
+    menu.classList.toggle('hamburger-clicked');
 });
 
-const aboutData = [
+const aboutDatas = [
     {text: 'Biography', content: 
     `I, <i>Gurbanli Narmin</i>, was born into a
     family of educators in Baku on November 12,
@@ -58,9 +46,9 @@ const aboutData = [
     <b>2024</b><br/>
     Programming<br/>
     - Individually<br/>
-    `}
+    `},
 ];
-const contactData = [
+const contactDatas = [
     {class: 'fa-brands fa-github', url: 'https://github.com/NarminGi'},
     {class: 'fa-brands fa-telegram', url: 'https://telegram.org/'},
     {class: 'fa-brands fa-instagram', url: 'https://www.instagram.com/'},
@@ -68,9 +56,10 @@ const contactData = [
     {class: 'fa-brands fa-youtube', url: 'https://www.youtube.com/'},
     {class: 'fa-solid fa-envelope', url: 'https://mail.google.com/'}
 ];
-function createDropDown(){
-    const navAbout = document.querySelector('.nav-about-list');
-    const navContacts = document.querySelector('.nav-contact-list');
+
+function createMobileMenu(){
+    const navAbout = document.querySelector('.hamburger-about');
+    const navContacts = document.querySelector('.hamburger-contacts');
     let heroParagraph = document.querySelector('.hero-paragraph');
     aboutData.forEach(item => {
         let li = document.createElement('li');
@@ -78,35 +67,21 @@ function createDropDown(){
         li.addEventListener('click', () => {
             heroParagraph.innerHTML = '';
             heroParagraph.innerHTML = item.content;
+            closeMobileMenu();
         });
         li.classList.add('about-list-links');
         navAbout.appendChild(li);
     });
-    contactData.forEach(item => {
+    contactDatas.forEach(item => {
         let li =  document.createElement('li');
         li.innerHTML = `<i class='${item.class}'></i>`;
         li.addEventListener('click',()=> window.location.href = item.url);
         navContacts.appendChild(li);
     });
 }
-createDropDown();
+createMobileMenu();
 
-/*
-const themes = document.querySelectorAll('.theme-item');
-const darkTheme = document.querySelector('.dark-theme');
-themes.forEach(element => {
-    element.addEventListener('click', () => {
-        themes.forEach(item => {
-            item.classList.remove('active-theme');
-        });
-        element.classList.add('active-theme');
-    });
-});
-
-darkTheme.addEventListener('click',()=>{
-    document.body.classList('dark-theme');
-    document.body.style.backgroundImage = '';
-    document.body.style.backgroundColor = 'black';
-})
-*/
-
+function closeMobileMenu() {
+    let menu = document.querySelector('.hamburger-menu-list-page');
+    menu.classList.remove('hamburger-clicked');
+}

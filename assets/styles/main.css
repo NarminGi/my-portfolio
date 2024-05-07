@@ -81,6 +81,11 @@
     right: 1%;
   }
 }
+@media (max-width: 768px) {
+  .header .header-top form .input-text-wrapper::before {
+    display: none;
+  }
+}
 .header .header-bottom {
   width: 100%;
   padding: 0% 5%;
@@ -116,13 +121,13 @@
 .header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item {
   padding: 15px 0;
 }
-.header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item a {
+.header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item p {
   color: var(--header-txt-clr);
 }
 .header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item .nav-about-list, .header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item .nav-contact-list {
   display: none;
 }
-.header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item:hover > a {
+.header .header-bottom .header-contents .nav-bar .nav-list .nav-list-item:hover p {
   -webkit-background-clip: text;
           background-clip: text;
   animation: textEffect 5s ease infinite;
@@ -200,7 +205,12 @@
 .header .header-bottom .header-contents .active-theme {
   background-color: rgb(252, 217, 224);
 }
-@media (max-width: 727px) {
+@media (min-width: 769px) {
+  .header .header-bottom .hamburger-menu-list-page {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   .header .header-bottom .header-contents {
     display: none;
   }
@@ -208,38 +218,62 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
   }
-  .header .header-bottom .header-contents-mobile .page-theme-mobile .theme-items-container .theme-item img {
-    max-width: 20px;
-    height: 20px;
+  .header .header-bottom .header-contents-mobile .hamburger-menu {
+    position: relative;
+    z-index: 3;
   }
   .header .header-bottom .header-contents-mobile .hamburger-menu > div {
     width: 20px;
     height: 2px;
     border-radius: 2px;
     background-color: var(--header-txt-clr);
+    transition: transform 2s;
   }
   .header .header-bottom .header-contents-mobile .hamburger-menu .meat {
     margin: 3px 0px;
   }
-  .header .header-bottom .header-contents-mobile .hamburger-menu .hamburger-menu-list {
-    display: none;
-  }
   .header .header-bottom .header-contents-mobile .hamburger-menu .rotateRight {
     transform: rotate(45deg);
-    transition: transform 2s;
   }
   .header .header-bottom .header-contents-mobile .hamburger-menu .disappear {
-    transition: opacity;
     opacity: 0;
   }
   .header .header-bottom .header-contents-mobile .hamburger-menu .rotateLeft {
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 2s;
     transform: rotate(-45deg);
+  }
+  .header .header-bottom .hamburger-menu-list-page {
+    display: none;
+  }
+  .header .header-bottom .hamburger-menu-list-page .hamburger-menu-list .hamburger-menu-list-item a {
+    color: var(--header-txt-clr);
+  }
+  .header .header-bottom .hamburger-menu-list-page .hamburger-menu-list .contact-me {
+    padding-top: 200px;
+  }
+  .header .header-bottom .hamburger-menu-list-page .hamburger-menu-list .contact-me .hamburger-contacts {
+    display: flex;
+    gap: 10px;
+  }
+  .header .header-bottom .hamburger-clicked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--header-txt-clr);
+    background-color: var(--main-tone);
+    font-family: var(--header-text);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -317,13 +351,9 @@
   padding-bottom: 100px;
   font-family: var(--header-text);
   font-size: 1.6rem;
-  font-weight: 200;
-  color: var(--header-txt-clr);
   text-align: center;
   -webkit-background-clip: text;
           background-clip: text;
-}
-.projects-section h3:hover {
   animation: textEffect 5s ease infinite;
   color: transparent;
   font-weight: bold;
@@ -430,6 +460,11 @@ body #canvas {
   position: absolute;
   width: 100vw;
   cursor: none;
+}
+@media (max-width: 727px) {
+  body #canvas {
+    display: none;
+  }
 }
 
 :root {

@@ -44,15 +44,11 @@
         padding-bottom: 100px;
         font-family: var(--header-text);
         font-size: 1.6rem;
-        font-weight: 200;
-        color: var(--header-txt-clr);
         text-align: center; 
         background-clip: text;
-        &:hover{
-            animation: textEffect 5s ease infinite;
-            color: transparent;
-            font-weight: bold;
-        }
+        animation: textEffect 5s ease infinite;
+        color: transparent;
+        font-weight: bold;
     }
 }
 

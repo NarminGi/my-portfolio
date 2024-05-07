@@ -18,8 +18,6 @@ const contactsData = [
     {class: 'fa-solid fa-envelope', url: 'https://mail.google.com/'}
 ];
 
-const userEmails = [];
-
 function createLists(){
     const skillsList = document.querySelector('.skills-list');
     skillsData.forEach(item => {
@@ -37,6 +35,8 @@ function createLists(){
 }
 createLists();
 
+/*
+const userEmails = [];
 function takeUserData(){
     button = document.querySelector('.subscribe-button');
     button.addEventListener('click',(event) => {
@@ -52,6 +52,31 @@ function takeUserData(){
                     email,
                 };
                 userEmails.push(obj);
+            }
+        console.log(userEmails);
+        emailInput.value = '';
+    });
+}
+takeUserData();
+*/
+
+let userEmails = JSON.parse(localStorage.getItem('userEmails')) || [];
+function takeUserData(){
+    button = document.querySelector('.subscribe-button');
+    button.addEventListener('click',(event) => {
+        event.preventDefault();
+        let emailInput = document.querySelector('.email-input');
+        let email = document.querySelector('.email-input').value;
+        let isSubscribed = userEmails.some(item => item.email===email);
+            if(isSubscribed){
+                alert("You have already subscribed!");
+            }
+            else{
+                let obj={
+                    email,
+                };
+                userEmails.push(obj);
+                localStorage.setItem('userEmails', JSON.stringify(userEmails));
             }
         console.log(userEmails);
         emailInput.value = '';
