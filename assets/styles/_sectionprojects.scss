@@ -26,8 +26,15 @@
                 display: none;
             }
         }
-        
     } 
+    @media (max-width: 410){
+        .swiper-slide{
+            width: 150px;
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
 }
 .swiper-pagination-bullet-active {
     background-color: rgb(251, 111, 178);
@@ -49,6 +56,12 @@
         animation: textEffect 5s ease infinite;
         color: transparent;
         font-weight: bold;
+    }
+    @media (max-width: 410px){
+        h3{
+            font-size: 1.2rem;
+            padding-bottom: 50px;
+        }
     }
 }
 .projects-dark{

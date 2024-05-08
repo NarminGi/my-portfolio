@@ -14,6 +14,24 @@ var swiper = new Swiper(".mySwiper", {
     speed: 1000,
   });
 
+function updateSlider() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 768 && screenWidth > 568) {
+      swiper.params.slidesPerView = 2;
+  }
+  else if(screenWidth <= 568){
+    swiper.params.slidesPerView = 1;
+    swiper.params.spaceBetween = 10;
+  }
+  else {
+      swiper.params.slidesPerView = 3;
+  }
+  swiper.update();
+}
+updateSlider();
+window.addEventListener('resize', updateSlider);
+
+
 const sliderData = [
     { imageUrl: './assets/images/project1.png', alternative: 'SpaceX project', directingUrl: '../SpaceX/index.html'},
     { imageUrl: './assets/images/project2.png', alternative: 'Bootstrap project', directingUrl: '../StartBootstrab/index.html'},
@@ -37,5 +55,18 @@ function createSlider(){
     }
     );
 }
-
 createSlider();
+
+/*
+const searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('input', function () {
+    const searchText = this.value.toLowerCase();
+    const filteredData = sliderData.filter(item => item.alternative.toLowerCase().includes(searchText));
+    createSlider(filteredData);
+    if (filteredData.length === 0) {
+        const projectSlider = document.querySelector('.swiper-wrapper');
+        projectSlider.innerHTML = '<div class="swiper-slide">No projects found</div>';
+    }
+});
+*/
+

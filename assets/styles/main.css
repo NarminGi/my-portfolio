@@ -466,6 +466,14 @@
 .swiper-wrapper .swiper-slide:hover::before {
   display: none;
 }
+@media (max-width: 410) {
+  .swiper-wrapper .swiper-slide {
+    width: 150px;
+  }
+  .swiper-wrapper .swiper-slide:hover {
+    transform: scale(1);
+  }
+}
 
 .swiper-pagination-bullet-active {
   background-color: rgb(251, 111, 178);
@@ -488,6 +496,12 @@
   animation: textEffect 5s ease infinite;
   color: transparent;
   font-weight: bold;
+}
+@media (max-width: 410px) {
+  .projects-section h3 {
+    font-size: 1.2rem;
+    padding-bottom: 50px;
+  }
 }
 
 .projects-dark {
