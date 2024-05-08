@@ -24,17 +24,20 @@
                 margin: 0 auto;
                 width: 40%;
                 position: relative;
-                &::before{
-                    content: '';
+                .disappeared{
+                    display: none;
+                }
+                .magnifier-icon{
                     top: 8%;
-                    right: 1%;
+                    right: 3%;
                     position: absolute;
-                    width: 10%;
-                    height: 90%;
-                    background-image: url('../images/search-icon.png');
-                    background-repeat: no-repeat;
-                    background-size: contain;
+                    width: 8%;
+                    height: 80%;
                     animation: searchIcon 3s linear infinite;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
                 }
                 input[type="text"] {
                     display: block;
@@ -53,33 +56,44 @@
                 @keyframes searchIcon {
                     0%{
                         top: 8%;
-                        right: 1%;
+                        right: 3%;
                     }
                     20% {
                         top: 15%;
-                        right: 3%;
+                        right: 5%;
                     }
                     40%{
                         top: 10%;
-                        right: 0%;
+                        right: 2%;
                     }
                     60%{
                         top: 0%;
-                        right: 0%;
+                        right: 2%;
                     }
                     80%{
                         top: 0%;
-                        right: 3%;
+                        right: 5%;
                     }
                     100%{
                         top: 8%;
-                        right: 1%;
+                        right: 3%;
                     }
                 }
-            }
-            @media (max-width: 768px) {
-                .input-text-wrapper::before{
-                    display: none;
+                @media(max-width: 768px) {
+                    .magnifier-icon{
+                        display: none;  
+                    }
+                }
+                @media(max-width: 498px) {
+                    input[type="text"] {
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+                }
+                @media(max-width: 299px) {
+                    input[type="text"] {
+                        font-size: 8px;
+                    }
                 }
             }
         }
@@ -274,6 +288,19 @@
                 line-height: 1.5rem;
             }
         }
-      
+        @media(max-width: 498px) {
+            .logo-image{
+                img{
+                    max-width: 40px;
+                }
+            }
+        }
+        @media(max-width: 299px) {
+            .logo-image{
+                img{
+                    max-width: 30px;
+                }
+            }
+        }
     }
 }

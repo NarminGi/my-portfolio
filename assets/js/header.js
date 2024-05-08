@@ -1,7 +1,9 @@
 const searchInput = document.querySelector('.search-input');
+const searchIcon = document.querySelector('.magnifier-icon');
 function addPlaceholder(){
     searchInput.addEventListener('blur',()=>{
-        searchInput.setAttribute('placeholder', 'Search here...')
+        searchInput.setAttribute('placeholder', 'Search here...');
+        searchIcon.classList.remove('disappeared');
     })
 
 }
@@ -10,17 +12,18 @@ addPlaceholder();
 function clearPlaceholder(){
     searchInput.addEventListener('click', () => {
         searchInput.setAttribute('placeholder', '');
-        const searchWrapper = window.getComputedStyle(document.querySelector('.input-text-wrapper'), '::before');
-        searchWrapper.style.setProperty('background-image', 'none');
+        searchIcon.classList.add('disappeared');
     });
 }
 clearPlaceholder();
 
-
-const logo = document.querySelector('.logo');
-logo.addEventListener('click',()=>{
-    window.location.href = 'index.html';
-});
+function clickLogo(){
+    const logo = document.querySelector('.logo');
+    logo.addEventListener('click',()=>{
+        window.location.href = 'index.html';
+    });
+}
+clickLogo();
 
 const aboutData = [
     {text: 'Biography', content: 
@@ -90,23 +93,32 @@ function createDropDown(){
     });
 }
 createDropDown();
-
-/*
 const themes = document.querySelectorAll('.theme-item');
-const darkTheme = document.querySelector('.dark-theme');
-themes.forEach(element => {
-    element.addEventListener('click', () => {
-        themes.forEach(item => {
-            item.classList.remove('active-theme');
+function toggleThemes(){
+    themes.forEach(element => {
+        element.addEventListener('click', () => {
+            themes.forEach(item => {
+                item.classList.remove('active-theme');
+            });
+            element.classList.add('active-theme');
         });
-        element.classList.add('active-theme');
     });
-});
+}
+toggleThemes();
 
-darkTheme.addEventListener('click',()=>{
-    document.body.classList('dark-theme');
-    document.body.style.backgroundImage = '';
-    document.body.style.backgroundColor = 'black';
-})
-*/
+function changePageTheme(){
+    const light = document.querySelector('.light-mode');
+    const dark = document.querySelector('.dark-mode');
+    const hero = document.querySelector('.hero-section');
+    const projects = document.querySelector('.projects-section');
+    dark.addEventListener('click',()=>{
+        hero.classList.add('hero-dark');
+        projects.classList.add('projects-dark');
+    });
+    light.addEventListener('click',()=>{
+        hero.classList.remove('hero-dark');
+        projects.classList.remove('projects-dark');
+    });
+}
+changePageTheme();
 

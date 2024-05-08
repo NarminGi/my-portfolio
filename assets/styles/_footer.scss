@@ -34,6 +34,11 @@
                         color: var(--footer-txt);
                     }
                 }
+                @media (max-width: 580px){
+                    .skills-list{
+                        text-align: center;
+                    }
+                }
             }
             .footer-contact-list{
                 font-size: 24px;
@@ -63,6 +68,11 @@
                         border-radius: 20px 0 0 20px;
                         width: 200px;
                     }
+                    @media (max-width: 412px){
+                        .email-input{
+                            width: 150px;
+                        }
+                    }
                     .subscribe-button{
                         padding: 10px 15px;
                         border: 1px solid transparent;
@@ -87,6 +97,20 @@
             #heart{
                 color: rgb(255, 105, 180);
             }
+        }
+    }
+    @media (max-width: 856px){
+        .footer-top{
+            flex-wrap: wrap;
+            .footer-item{
+                flex-basis: 50%;
+                padding-bottom: 40px;
+            }
+        }
+    }
+    @media (max-width: 580px){
+        .footer-top{
+            justify-content: center;
         }
     }
 } 
