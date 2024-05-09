@@ -3,7 +3,7 @@ const searchIcon = document.querySelector('.magnifier-icon');
 function addPlaceholder(){
     searchInput.addEventListener('blur',()=>{
         searchInput.setAttribute('placeholder', 'Search here...');
-        searchIcon.classList.remove('disappeared');
+        searchIcon.classList.remove('disappear');
     })
 
 }
@@ -12,7 +12,7 @@ addPlaceholder();
 function clearPlaceholder(){
     searchInput.addEventListener('click', () => {
         searchInput.setAttribute('placeholder', '');
-        searchIcon.classList.add('disappeared');
+        searchIcon.classList.add('disappear');
     });
 }
 clearPlaceholder();

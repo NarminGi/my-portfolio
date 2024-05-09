@@ -5,23 +5,26 @@
     padding-top: 120px;
     background-image: url('../images/hero-bg.png');
     background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    .hero-text{
-        flex-basis: 50%;
-        p{
-            padding-left: 200px;
-            font-size: 1.5rem;
-            font-family: "Inconsolata", monospace;
+    .hero-items{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .hero-text{
+            flex-basis: 50%;
+            p{
+                padding-left: 200px;
+                font-size: 1.5rem;
+                font-family: "Inconsolata", monospace;
+            }
         }
-    }
-    .hero-image{
-        flex-basis: 33%;
-        img{
-            width: 100%;
-            height: auto;
+        .hero-image{
+            flex-basis: 33%;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

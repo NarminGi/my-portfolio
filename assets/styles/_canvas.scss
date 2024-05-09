@@ -1,0 +1,14 @@
+body{
+    .body-content{
+        position: relative;
+        overflow: hidden;
+    }
+    #canvas{
+        position: absolute;
+        width: 100vw;
+        cursor: none;
+        @media (max-width: 727px){
+            display: none;
+        }
+    }
+}

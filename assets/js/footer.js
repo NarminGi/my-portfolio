@@ -35,31 +35,6 @@ function createLists(){
 }
 createLists();
 
-/*
-const userEmails = [];
-function takeUserData(){
-    button = document.querySelector('.subscribe-button');
-    button.addEventListener('click',(event) => {
-        event.preventDefault();
-        let emailInput = document.querySelector('.email-input');
-        let email = document.querySelector('.email-input').value;
-        let isSubscribed = userEmails.some(item => item.email===email);
-            if(isSubscribed){
-                alert("You have already subscribed!");
-            }
-            else{
-                let obj={
-                    email,
-                };
-                userEmails.push(obj);
-            }
-        console.log(userEmails);
-        emailInput.value = '';
-    });
-}
-takeUserData();
-*/
-
 let userEmails = JSON.parse(localStorage.getItem('userEmails')) || [];
 function takeUserData(){
     button = document.querySelector('.subscribe-button');

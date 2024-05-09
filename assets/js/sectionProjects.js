@@ -56,17 +56,3 @@ function createSlider(){
     );
 }
 createSlider();
-
-/*
-const searchInput = document.querySelector('.search-input');
-searchInput.addEventListener('input', function () {
-    const searchText = this.value.toLowerCase();
-    const filteredData = sliderData.filter(item => item.alternative.toLowerCase().includes(searchText));
-    createSlider(filteredData);
-    if (filteredData.length === 0) {
-        const projectSlider = document.querySelector('.swiper-wrapper');
-        projectSlider.innerHTML = '<div class="swiper-slide">No projects found</div>';
-    }
-});
-*/
-
