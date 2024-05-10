@@ -33,10 +33,10 @@
                         padding-right: 20px;
                         color: var(--footer-txt);
                     }
-                }
-                @media (max-width: 580px){
-                    .skills-list{
-                        text-align: center;
+                    @media (max-width: 298px){
+                        i{
+                            padding-right: 10px;
+                        }
                     }
                 }
             }
@@ -86,6 +86,23 @@
                     }
                 }
             }
+            @media (max-width: 630px){
+                .skills-list{
+                    padding-right: 0px;
+                }
+            }
+            @media (max-width: 276px){
+                .skills-list {
+                    li{
+                        font-size: 14px;
+                    }
+                }
+                .footer-contact-list{
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
     .footer-bottom{
@@ -114,3 +131,8 @@
         }
     }
 } 
+.footer-dark{
+    background-image: url('../images/footer-bg-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -11,11 +11,11 @@ const skillsData = [
 
 const contactsData = [
     {class: 'fa-brands fa-github', url: 'https://github.com/NarminGi'},
-    {class: 'fa-brands fa-telegram', url: 'https://telegram.org/'},
-    {class: 'fa-brands fa-instagram', url: 'https://www.instagram.com/'},
-    {class: 'fa-brands fa-facebook-f', url: 'https://www.facebook.com/'},
-    {class: 'fa-brands fa-youtube', url: 'https://www.youtube.com/'},
-    {class: 'fa-solid fa-envelope', url: 'https://mail.google.com/'}
+    {class: 'fa-brands fa-telegram', url: 'https://t.me/+XaPYRwl7NEQzZDJi'},
+    {class: 'fa-brands fa-instagram', url: 'https://www.instagram.com/imitaten?igsh=YzljYTk1ODg3Zg=='},
+    {class: 'fa-brands fa-facebook-f', url: 'https://www.facebook.com/profile.php?id=100048196150017'},
+    {class: 'fa-brands fa-twitter', url: 'https://twitter.com/alienaarea'},
+    {class: 'fa-brands fa-youtube', url: 'https://www.youtube.com/channel/UCe5MGCuyrAd2Cg8mYmX3Z2Q'}
 ];
 
 function createLists(){
@@ -41,7 +41,12 @@ function takeUserData(){
     button.addEventListener('click',(event) => {
         event.preventDefault();
         let emailInput = document.querySelector('.email-input');
-        let email = document.querySelector('.email-input').value;
+        let email = emailInput.value.trim;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter the correct email address.");
+            return;
+        }
         let isSubscribed = userEmails.some(item => item.email===email);
             if(isSubscribed){
                 alert("You have already subscribed!");

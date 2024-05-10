@@ -7,6 +7,10 @@ const slidersData = [
     { imageUrl: './assets/images/project6.png', alternative: 'Restaurant project', directingUrl: '../HTML & CSS Final Project/index.html', tag: 'restaurant'},
 ];
 
+const heroSection = document.querySelector('.hero-section');
+const projectsSection = document.querySelector('.projects-section');
+const resultSection = document.querySelector('.search-results-section');
+
 function searchAndDisplay() {
     const result = document.querySelector('.result');
     const searchTerm = searchInput.value.trim().toLowerCase();
@@ -19,15 +23,36 @@ function searchAndDisplay() {
     }
 }
 
-searchInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        const heroSection = document.querySelector('.hero-section');
-        const projectsSection = document.querySelector('.projects-section');
-        const resultSection = document.querySelector('.search-results-section');
-        heroSection.classList.add('disappear');
-        projectsSection.classList.add('disappear');
-        resultSection.classList.remove('disappear');
-        searchAndDisplay();
-    }
-});
+function showSearchResult(){
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            heroSection.classList.add('disappear');
+            projectsSection.classList.add('disappear');
+            canvas.classList.add('disappear');
+            resultSection.classList.remove('disappear');
+            searchAndDisplay();
+        }
+    });
+}
+showSearchResult();
+
+function showHeroPage(){
+    document.querySelectorAll('.nav-about-list>li').forEach(item => {
+        item.addEventListener('click', () => {
+            heroSection.classList.remove('disappear');
+            projectsSection.classList.remove('disappear');
+            canvas.classList.remove('disappear');
+            resultSection.classList.add('disappear');
+        });
+    });
+    document.querySelectorAll('.hamburger-about>li').forEach(item => {
+        item.addEventListener('click', () => {
+            heroSection.classList.remove('disappear');
+            projectsSection.classList.remove('disappear');
+            resultSection.classList.add('disappear');
+        });
+    });
+    
+}
+showHeroPage();
